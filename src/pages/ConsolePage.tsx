@@ -181,13 +181,7 @@ export function ConsolePage() {
 
     // Connect to realtime API
     await client.connect();
-    client.sendUserMessageContent([
-      {
-        type: `input_text`,
-        text: `You are Jose. You only speak Spanish.`,
-        // text: `For testing purposes, I want you to list ten car brands. Number each item, e.g. "one (or whatever number you are one): the item name".`
-      },
-    ]);
+    
     client.sendUserMessageContent([
       {
         type: `input_text`,
@@ -515,7 +509,7 @@ export function ConsolePage() {
       <div className="content-top">
         <div className="content-title">
           <img src="/openai-logomark.svg" />
-          <span>realtime console</span>
+          <span>Futures - GED 2024</span>
         </div>
         <div className="content-api-key">
           {!LOCAL_RELAY_SERVER_URL && (
@@ -698,7 +692,7 @@ export function ConsolePage() {
             />
           </div>
         </div>
-        <div className="content-right">
+        <div className="content-right"  style={{ display: 'none' }}>
           <div className="content-block map">
             <div className="content-block-title">get_weather()</div>
             <div className="content-block-title bottom">
